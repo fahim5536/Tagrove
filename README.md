@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=0B0F17" alt="React 18" />
   <img src="https://img.shields.io/badge/TypeScript-5.9%20strict-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript 5.9 strict" />
   <img src="https://img.shields.io/badge/tests-143%20passing-2EA043?style=flat-square" alt="143 tests passing" />
-  <img src="https://img.shields.io/badge/license-MIT-8A94A6?style=flat-square" alt="MIT License" />
+  <img src="https://img.shields.io/badge/license-all%20rights%20reserved-C0392B?style=flat-square" alt="License: all rights reserved" />
 </p>
 
 **Tagrove turns a folder of images into Adobe Stock–ready metadata.** Import them,
@@ -265,4 +265,11 @@ legacy-wpf/    Archived C#/WPF implementation of the same product (reference onl
 
 ## License
 
-Distributed under the MIT License. See [LICENSE](./LICENSE) for the full text.
+Proprietary — **all rights reserved** by TAMZID ABDUR RAHMAN. See
+[LICENSE](./LICENSE) for the full terms.
+
+In short: you may install and use Tagrove, and read the source to evaluate it. You
+may **not** copy, redistribute, republish, modify, sell, or use this project or any
+derivative of it commercially without prior written permission from the copyright
+holder. Third-party dependencies (Electron, React, and the rest) remain under their
+own licenses, which this notice does not change.

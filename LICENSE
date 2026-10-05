@@ -1,21 +1,50 @@
-MIT License
+Copyright (c) 2026 TAMZID ABDUR RAHMAN. All rights reserved.
 
-Copyright (c) 2026 TAMZID ABDUR RAHMAN
+This repository and the Tagrove software, source code, documentation, app icon,
+branding and associated materials it contains (together, "the Software") are the
+exclusive property of the copyright holder named above. No license to the Software
+is granted, implied, or established by making it available in this repository.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. WHAT YOU MAY NOT DO WITHOUT PRIOR WRITTEN PERMISSION
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+   You may not, in whole or in part:
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+   a) copy, reproduce, publicly display, or redistribute the Software or its
+      source code;
+   b) modify, translate, adapt, decompile, or create derivative works of it;
+   c) publish it, mirror it, re-upload it, or host it anywhere (including on
+      another source-code hosting service);
+   d) sell, resell, sublicense, lease, distribute for compensation, bundle with
+      a paid product, offer as a paid service, or monetize it in any way;
+   e) use it, or any work derived from it, for commercial purposes.
+
+   Downloading, building, or running the Software does not grant you any of the
+   rights above. Possession is not permission.
+
+2. WHAT IS ALLOWED
+
+   You may install and use Tagrove on your own machines for your own work, and
+   you may read the source code to evaluate it. Any other use requires a written
+   agreement. Permission requests, including commercial and redistribution
+   licensing, should be directed to the copyright holder.
+
+3. OPEN-SOURCE COMPONENTS
+
+   This restriction applies only to the Software owned by the copyright holder.
+   Third-party components (for example Electron, React, TypeScript, and their
+   dependencies) remain governed by their own licenses, which are unmodified by
+   this document. Nothing here limits the rights those licenses give you with
+   respect to those components.
+
+4. TRADEMARKS
+
+   The name "Tagrove", its logo, and its icon are trademarks of the copyright
+   holder. This document grants no right to use them.
+
+5. NO WARRANTY
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+   COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING
+   FROM OR IN CONNECTION WITH THE SOFTWARE OR ITS USE.
