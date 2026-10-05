@@ -1,0 +1,111 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans:
+    'Segoe UI Variable Text', 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial,
+    sans-serif;
+  --font-mono: 'Cascadia Code', 'Cascadia Mono', ui-monospace, 'Consolas', monospace;
+
+  /* Surfaces — dark, Linear/Vercel-style stack from page to card */
+  --color-base: #0a0d13;
+  --color-sidebar: #0d1119;
+  --color-surface: #11151d;
+  --color-surface-2: #171c26;
+  --color-surface-3: #1c2230;
+  --color-border: #232a36;
+
+  /* Foreground */
+  --color-fg: #e7ebf3;
+  --color-fg-muted: #99a2b5;
+  --color-fg-subtle: #667084;
+
+  /* Accent + semantic colors */
+  --color-accent: #6e7ff3;
+  --color-accent-hover: #7d8cf5;
+  --color-accent-active: #5f70e8;
+  --color-accent-soft: #1b2237;
+  --color-success: #3ecf8e;
+  --color-warning: #e9b44c;
+  --color-danger: #f0616d;
+  --color-info: #62a8fa;
+
+  --animate-fade-in: fade-in 150ms ease-out;
+  --animate-toast-in: toast-in 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-progress-indeterminate: progress-indeterminate 1.4s ease-in-out infinite;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes toast-in {
+    from {
+      opacity: 0;
+      transform: translateY(8px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes progress-indeterminate {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(250%);
+    }
+  }
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-base font-sans text-fg antialiased;
+    overflow: hidden;
+  }
+
+  ::selection {
+    background-color: color-mix(in srgb, var(--color-accent) 35%, transparent);
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border) transparent;
+  }
+}
+
+/*
+ * Light theme: overrides the design tokens under [data-theme='light'].
+ * The default token values above are the dark palette; the appearance
+ * setting switches the attribute on <html>.
+ */
+:root[data-theme='light'] {
+  --color-base: #f2f4f8;
+  --color-sidebar: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-2: #eef1f5;
+  --color-surface-3: #e3e7ee;
+  --color-border: #d7dce4;
+  --color-fg: #1a2030;
+  --color-fg-muted: #5b6472;
+  --color-fg-subtle: #8a93a3;
+  --color-accent: #5468e7;
+  --color-accent-hover: #4557d4;
+  --color-accent-active: #3f4fc4;
+  --color-accent-soft: #e5e9fc;
+  --color-success: #1e9e68;
+  --color-warning: #b97d14;
+  --color-danger: #d5454f;
+  --color-info: #2f7fd6;
+}

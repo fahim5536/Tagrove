@@ -1,0 +1,7 @@
+node_modules/
+out/
+release/
+coverage/
+legacy-wpf/
+resources/icon.png
+package-lock.json

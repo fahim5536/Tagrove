@@ -1,0 +1,79 @@
+name: Release
+
+# Builds the Windows installer, signs it with whichever method is configured
+# via repository secrets, publishes it to GitHub Releases together with
+# latest.yml (the electron-updater feed), and attaches the matching CHANGELOG
+# section as release notes. Tags containing a dash (v1.1.0-beta.1) are
+# published as pre-releases: the stable channel skips them, beta users get
+# them.
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Build and publish installer
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Fail fast on tag/version mismatch
+        shell: bash
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          TAG="${GITHUB_REF_NAME#v}"
+          if [ "$VERSION" != "$TAG" ]; then
+            echo "::error::Tag ${GITHUB_REF_NAME} does not match package.json version ${VERSION}. Bump package.json, update CHANGELOG.md, then tag."
+            exit 1
+          fi
+
+      - name: Mark pre-release tags
+        shell: bash
+        run: |
+          if [[ "${GITHUB_REF_NAME}" == *"-"* ]]; then
+            echo "EP_PRE_RELEASE=true" >> "$GITHUB_ENV"
+            echo "Tag ${GITHUB_REF_NAME} will be published as a pre-release."
+          fi
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Verify (typecheck + lint + test + build)
+        run: npm run verify
+
+      - name: Build, sign, and publish the installer
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_OWNER: ${{ github.repository_owner }}
+          GH_REPO: ${{ github.event.repository.name }}
+          # Classic PFX signing (set both, or neither).
+          CSC_LINK: ${{ secrets.CSC_LINK }}
+          CSC_KEY_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }}
+          # Azure Trusted Signing (set all seven, or none).
+          AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+          AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+          AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+          AZURE_ENDPOINT: ${{ secrets.AZURE_ENDPOINT }}
+          AZURE_CODE_SIGNING_ACCOUNT_NAME: ${{ secrets.AZURE_CODE_SIGNING_ACCOUNT_NAME }}
+          AZURE_CERTIFICATE_PROFILE_NAME: ${{ secrets.AZURE_CERTIFICATE_PROFILE_NAME }}
+          AZURE_PUBLISHER_NAME: ${{ secrets.AZURE_PUBLISHER_NAME }}
+        run: npx electron-builder --win --x64 --publish always
+
+      - name: Attach CHANGELOG section as release notes
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node scripts/extract-release-notes.mjs "${GITHUB_REF_NAME}" > release-notes.md
+          gh release edit "${GITHUB_REF_NAME}" --notes-file release-notes.md
+          echo "Release notes updated:"
+          head -n 20 release-notes.md

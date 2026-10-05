@@ -1,0 +1,68 @@
+{
+  "name": "tagrove",
+  "productName": "Tagrove",
+  "version": "1.0.0",
+  "description": "Generate Adobe Stock metadata for images with AI.",
+  "author": "Tagrove Team",
+  "license": "UNLICENSED",
+  "private": true,
+  "type": "commonjs",
+  "main": "out/main/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fahim5536/Tagrove.git"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "dev": "electron-vite dev",
+    "start": "electron-vite preview",
+    "build": "electron-vite build",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "verify": "npm run typecheck && npm run lint && npm run test && npm run build",
+    "dist": "npm run build && electron-builder --win --x64",
+    "dist:dir": "npm run build && electron-builder --dir --win --x64"
+  },
+  "dependencies": {
+    "@google/genai": "^2.27.0",
+    "@sentry/electron": "^8.0.0",
+    "better-sqlite3": "^13.0.3",
+    "electron-log": "^5.4.4",
+    "electron-updater": "^6.8.9",
+    "i18next": "^26.4.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-i18next": "^17.0.15",
+    "zod": "^4.6.5",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/node": "^24.19.1",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^5.2.0",
+    "electron": "^44.5.1",
+    "electron-builder": "^26.15.3",
+    "electron-vite": "^5.0.0",
+    "eslint": "^10.12.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.7",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.9",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.71.0",
+    "vite": "^7.3.6",
+    "vitest": "^5.0.3"
+  }
+}

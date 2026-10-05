@@ -1,0 +1,272 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="Animated Tagrove workflow: import images, generate metadata with Gemini, review the results, export an Adobe Stock CSV">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B0F17"/>
+      <stop offset="0.55" stop-color="#111826"/>
+      <stop offset="1" stop-color="#1A2334"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6E7FF3"/>
+      <stop offset="1" stop-color="#62A8FA"/>
+    </linearGradient>
+    <linearGradient id="btnGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7A8AF6"/>
+      <stop offset="1" stop-color="#5665DE"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#6E7FF3" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#6E7FF3" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <g id="thumb">
+      <rect width="32" height="32" rx="7" fill="#16203A" stroke="#26314C"/>
+      <circle cx="11" cy="12" r="3" fill="#4A5878"/>
+      <path d="M5 27 L13 16 L19 23 L23 18 L27 27 Z" fill="#3E4C6B"/>
+    </g>
+    <style>
+      text { font-family: "Segoe UI", system-ui, Roboto, Helvetica, Arial, sans-serif; }
+      .lbl { font-size: 11; fill: #6B7688; letter-spacing: 1.4; }
+      .file { font-size: 13; fill: #C6CEDD; }
+      .title { font-size: 13; fill: #E8ECF5; }
+      .pill { font-size: 11; fill: #A9B6D6; }
+      .chip { font-size: 11; }
+    </style>
+  </defs>
+
+  <!-- backdrop -->
+  <rect x="16" y="16" width="1168" height="668" rx="20" fill="url(#bg)" stroke="#1E2739"/>
+  <ellipse cx="400" cy="120" rx="320" ry="120" fill="url(#glow)" filter="url(#soft)" opacity="0.5"/>
+
+  <!-- header -->
+  <text x="48" y="58" font-size="22" font-weight="700" fill="#E8ECF5">Tagrove</text>
+  <text x="142" y="58" font-size="22" fill="#7C879B">· Generate</text>
+
+  <!-- pipeline band -->
+  <line x1="120" y1="104" x2="990" y2="104" stroke="#1B2434" stroke-width="3" stroke-linecap="round"/>
+  <g>
+    <circle cx="120" cy="104" r="9" fill="#0B0F17" stroke="#2A3550" stroke-width="2"/>
+    <circle cx="120" cy="104" r="9" fill="none" stroke="#6E7FF3" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.05;0.08;0.13;0.16;1" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <text x="120" y="132" class="lbl" text-anchor="middle">IMPORT</text>
+  </g>
+  <g>
+    <circle cx="400" cy="104" r="9" fill="#0B0F17" stroke="#2A3550" stroke-width="2"/>
+    <circle cx="400" cy="104" r="9" fill="none" stroke="#6E7FF3" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.14;0.16;0.60;0.63;1" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <text x="400" y="132" class="lbl" text-anchor="middle">GENERATE</text>
+  </g>
+  <g>
+    <circle cx="700" cy="104" r="9" fill="#0B0F17" stroke="#2A3550" stroke-width="2"/>
+    <circle cx="700" cy="104" r="9" fill="none" stroke="#6E7FF3" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.62;0.65;0.73;0.76;1" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <text x="700" y="132" class="lbl" text-anchor="middle">REVIEW</text>
+  </g>
+  <g>
+    <circle cx="990" cy="104" r="9" fill="#0B0F17" stroke="#2A3550" stroke-width="2"/>
+    <circle cx="990" cy="104" r="9" fill="none" stroke="#3FBF6B" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.78;0.81;1" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <text x="990" y="132" class="lbl" text-anchor="middle">EXPORT</text>
+  </g>
+  <g>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.04;0.93;1" dur="8s" repeatCount="indefinite"/>
+    <circle cy="104" r="12" fill="#6E7FF3" opacity="0.25" filter="url(#soft)">
+      <animate attributeName="cx" values="120;120;400;400;700;700;990;990" keyTimes="0;0.05;0.14;0.60;0.63;0.76;0.80;1" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cy="104" r="6" fill="#A9B4FF">
+      <animate attributeName="cx" values="120;120;400;400;700;700;990;990" keyTimes="0;0.05;0.14;0.60;0.63;0.76;0.80;1" dur="8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- app window -->
+  <g>
+    <rect x="48" y="152" width="1104" height="496" rx="14" fill="#0D1220" stroke="#1E2739"/>
+    <path d="M48 166 a14 14 0 0 1 14 -14 h1076 a14 14 0 0 1 14 14 v22 h-1104 z" fill="#111827"/>
+    <circle cx="70" cy="172" r="5" fill="#3A4560"/>
+    <circle cx="88" cy="172" r="5" fill="#3A4560"/>
+    <circle cx="106" cy="172" r="5" fill="#3A4560"/>
+    <rect x="48" y="188" width="184" height="460" fill="#0A0F1A"/>
+    <line x1="232" y1="188" x2="232" y2="648" stroke="#1E2739"/>
+    <rect x="60" y="206" width="160" height="32" rx="8" fill="#18223A"/>
+    <text x="76" y="227" font-size="13" fill="#8E9CF8">Generate</text>
+    <text x="76" y="263" font-size="13" fill="#6B7688">History</text>
+    <text x="76" y="299" font-size="13" fill="#6B7688">Settings</text>
+    <text x="76" y="335" font-size="13" fill="#6B7688">About</text>
+
+    <!-- toolbar -->
+    <rect x="252" y="204" width="146" height="34" rx="8" fill="#141C2E" stroke="#28324A"/>
+    <text x="325" y="226" font-size="12" fill="#C6CEDD" text-anchor="middle">+ Import images</text>
+    <rect x="408" y="204" width="138" height="34" rx="8" fill="url(#btnGrad)"/>
+    <text x="477" y="226" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">✦ Generate all</text>
+    <rect x="556" y="204" width="120" height="34" rx="8" fill="#141C2E" stroke="#28324A"/>
+    <text x="616" y="226" font-size="12" fill="#8B96AC" text-anchor="middle">Preset: Photo</text>
+    <g>
+      <rect x="986" y="204" width="150" height="34" rx="8" fill="#141C2E" stroke="#28324A"/>
+      <rect x="986" y="204" width="150" height="34" rx="8" fill="none" stroke="#3FBF6B" stroke-width="1.6" opacity="0">
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.72;0.78;0.92;1" dur="8s" repeatCount="indefinite"/>
+      </rect>
+      <text x="1061" y="226" font-size="12" fill="#C6CEDD" text-anchor="middle">⇩ Export CSV</text>
+    </g>
+
+    <!-- table head -->
+    <text x="264" y="272" class="lbl">FILE</text>
+    <text x="430" y="272" class="lbl">TITLE</text>
+    <text x="700" y="272" class="lbl">KEYWORDS</text>
+    <text x="986" y="272" class="lbl">STATUS</text>
+    <line x1="252" y1="282" x2="1136" y2="282" stroke="#1A2334"/>
+    <line x1="252" y1="345" x2="1136" y2="345" stroke="#151D2C"/>
+    <line x1="252" y1="411" x2="1136" y2="411" stroke="#151D2C"/>
+    <line x1="252" y1="477" x2="1136" y2="477" stroke="#151D2C"/>
+  </g>
+
+  <!-- dynamic content: rows, progress, export -->
+  <g>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.04;0.93;1" dur="8s" repeatCount="indefinite"/>
+
+    <!-- row 1 -->
+    <g>
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.05;0.09;1" dur="8s" repeatCount="indefinite"/>
+      <use href="#thumb" x="264" y="290"/>
+      <text x="306" y="310" class="file">sunset-01.jpg</text>
+    </g>
+    <g>
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.30;0.34;1" dur="8s" repeatCount="indefinite"/>
+      <text x="430" y="310" class="title">Golden retriever at sunset park</text>
+      <g>
+        <rect x="700" y="295" width="62" height="22" rx="11" fill="#18223A" stroke="#2C3A5C"/>
+        <text x="731" y="310" class="pill" text-anchor="middle">sunset</text>
+      </g>
+      <g>
+        <rect x="770" y="295" width="44" height="22" rx="11" fill="#18223A" stroke="#2C3A5C"/>
+        <text x="792" y="310" class="pill" text-anchor="middle">dog</text>
+      </g>
+      <g>
+        <rect x="822" y="295" width="52" height="22" rx="11" fill="#18223A" stroke="#2C3A5C"/>
+        <text x="848" y="310" class="pill" text-anchor="middle">park</text>
+      </g>
+    </g>
+    <g>
+      <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.15;0.16;1" dur="8s" repeatCount="indefinite"/>
+      <rect x="986" y="294" width="110" height="24" rx="12" fill="#151C2B" stroke="#28324A"/>
+      <text x="1041" y="311" class="chip" fill="#6B7688" text-anchor="middle">Pending</text>
+    </g>
+    <g>
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.16;0.17;0.29;0.30;1" dur="8s" repeatCount="indefinite"/>
+      <rect x="986" y="294" width="110" height="24" rx="12" fill="#2A2113" stroke="#6B5320"/>
+      <circle cx="1004" cy="306" r="6" fill="none" stroke="#F5A623" stroke-width="2" stroke-dasharray="14 22" stroke-linecap="round">
+        <animateTransform attributeName="transform" type="rotate" values="0 1004 306;360 1004 306" dur="0.9s" repeatCount="indefinite"/>
+      </circle>
+      <text x="1018" y="310" class="chip" fill="#F0C070">Generating</text>
+    </g>
+    <g>
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.30;0.31;1" dur="8s" repeatCount="indefinite"/>
+      <rect x="986" y="294" width="110" height="24" rx="12" fill="#10231A" stroke="#245C36"/>
+      <path d="M1000 306 l4 5 l8 -10" fill="none" stroke="#3FBF6B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="1052" y="310" class="chip" fill="#6EE7A0" text-anchor="middle">Done</text>
+    </g>
+
+    <!-- row 2 -->
+    <g>
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.07;0.11;1" dur="8s" repeatCount="indefinite"/>
+      <use href="#thumb" x="264" y="356"/>
+      <text x="306" y="376" class="file">city-02.jpg</text>
+    </g>
+    <g>
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.45;0.49;1" dur="8s" repeatCount="indefinite"/>
+      <text x="430" y="376" class="title">Neon street in the rain</text>
+      <rect x="700" y="361" width="56" height="22" rx="11" fill="#18223A" stroke="#2C3A5C"/>
+      <text x="728" y="376" class="pill" text-anchor="middle">neon</text>
+      <rect x="764" y="361" width="48" height="22" rx="11" fill="#18223A" stroke="#2C3A5C"/>
+      <text x="788" y="376" class="pill" text-anchor="middle">rain</text>
+      <rect x="820" y="361" width="48" height="22" rx="11" fill="#18223A" stroke="#2C3A5C"/>
+      <text x="844" y="376" class="pill" text-anchor="middle">city</text>
+    </g>
+    <g>
+      <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.29;0.30;1" dur="8s" repeatCount="indefinite"/>
+      <rect x="986" y="360" width="110" height="24" rx="12" fill="#151C2B" stroke="#28324A"/>
+      <text x="1041" y="377" class="chip" fill="#6B7688" text-anchor="middle">Pending</text>
+    </g>
+    <g>
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.30;0.31;0.44;0.45;1" dur="8s" repeatCount="indefinite"/>
+      <rect x="986" y="360" width="110" height="24" rx="12" fill="#2A2113" stroke="#6B5320"/>
+      <circle cx="1004" cy="372" r="6" fill="none" stroke="#F5A623" stroke-width="2" stroke-dasharray="14 22" stroke-linecap="round">
+        <animateTransform attributeName="transform" type="rotate" values="0 1004 372;360 1004 372" dur="0.9s" repeatCount="indefinite"/>
+      </circle>
+      <text x="1018" y="376" class="chip" fill="#F0C070">Generating</text>
+    </g>
+    <g>
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.45;0.46;1" dur="8s" repeatCount="indefinite"/>
+      <rect x="986" y="360" width="110" height="24" rx="12" fill="#10231A" stroke="#245C36"/>
+      <path d="M1000 372 l4 5 l8 -10" fill="none" stroke="#3FBF6B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="1052" y="376" class="chip" fill="#6EE7A0" text-anchor="middle">Done</text>
+    </g>
+
+    <!-- row 3 -->
+    <g>
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.09;0.13;1" dur="8s" repeatCount="indefinite"/>
+      <use href="#thumb" x="264" y="422"/>
+      <text x="306" y="442" class="file">food-03.jpg</text>
+    </g>
+    <g>
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.62;0.66;1" dur="8s" repeatCount="indefinite"/>
+      <text x="430" y="442" class="title">Avocado toast on wood table</text>
+      <rect x="700" y="427" width="72" height="22" rx="11" fill="#18223A" stroke="#2C3A5C"/>
+      <text x="736" y="442" class="pill" text-anchor="middle">avocado</text>
+      <rect x="780" y="427" width="80" height="22" rx="11" fill="#18223A" stroke="#2C3A5C"/>
+      <text x="820" y="442" class="pill" text-anchor="middle">breakfast</text>
+      <rect x="868" y="427" width="66" height="22" rx="11" fill="#18223A" stroke="#2C3A5C"/>
+      <text x="901" y="442" class="pill" text-anchor="middle">healthy</text>
+    </g>
+    <g>
+      <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.44;0.45;1" dur="8s" repeatCount="indefinite"/>
+      <rect x="986" y="426" width="110" height="24" rx="12" fill="#151C2B" stroke="#28324A"/>
+      <text x="1041" y="443" class="chip" fill="#6B7688" text-anchor="middle">Pending</text>
+    </g>
+    <g>
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.45;0.46;0.61;0.62;1" dur="8s" repeatCount="indefinite"/>
+      <rect x="986" y="426" width="110" height="24" rx="12" fill="#2A2113" stroke="#6B5320"/>
+      <circle cx="1004" cy="438" r="6" fill="none" stroke="#F5A623" stroke-width="2" stroke-dasharray="14 22" stroke-linecap="round">
+        <animateTransform attributeName="transform" type="rotate" values="0 1004 438;360 1004 438" dur="0.9s" repeatCount="indefinite"/>
+      </circle>
+      <text x="1018" y="442" class="chip" fill="#F0C070">Generating</text>
+    </g>
+    <g>
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.62;0.63;1" dur="8s" repeatCount="indefinite"/>
+      <rect x="986" y="426" width="110" height="24" rx="12" fill="#10231A" stroke="#245C36"/>
+      <path d="M1000 438 l4 5 l8 -10" fill="none" stroke="#3FBF6B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="1052" y="442" class="chip" fill="#6EE7A0" text-anchor="middle">Done</text>
+    </g>
+
+    <!-- progress -->
+    <rect x="264" y="556" width="760" height="8" rx="4" fill="#162032"/>
+    <rect x="264" y="556" width="0" height="8" rx="4" fill="url(#accentGrad)">
+      <animate attributeName="width" values="0;0;760;760" keyTimes="0;0.16;0.62;1" dur="8s" repeatCount="indefinite"/>
+    </rect>
+    <text x="1040" y="565" font-size="12" fill="#8B96AC">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.15;0.16;0.61;0.62;1" dur="8s" repeatCount="indefinite"/>
+      Generating…
+    </text>
+    <text x="1040" y="565" font-size="12" fill="#6EE7A0" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.62;0.63;1" dur="8s" repeatCount="indefinite"/>
+      Complete
+    </text>
+    <text x="264" y="618" font-size="11" fill="#5F6A7C">3 images · gemini-2.5-flash · preset: Photo · autosaved</text>
+
+    <!-- exported file -->
+    <g transform="translate(0 0)">
+      <animateTransform attributeName="transform" type="translate" values="0 16;0 16;0 0;0 0" keyTimes="0;0.80;0.86;1" dur="8s" repeatCount="indefinite"/>
+      <g>
+        <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.80;0.86;1" dur="8s" repeatCount="indefinite"/>
+        <rect x="880" y="592" width="256" height="44" rx="10" fill="#0E1F17" stroke="#245C36"/>
+        <rect x="896" y="602" width="24" height="26" rx="4" fill="none" stroke="#3FBF6B" stroke-width="1.6"/>
+        <path d="M901 610 h14 M901 616 h14 M901 622 h9" stroke="#3FBF6B" stroke-width="1.4" stroke-linecap="round"/>
+        <text x="932" y="619" font-size="12" fill="#6EE7A0">tagrove-export.csv</text>
+      </g>
+    </g>
+  </g>
+</svg>

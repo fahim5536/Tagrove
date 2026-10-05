@@ -1,0 +1,88 @@
+{
+  "app": { "name": "Tagrove" },
+  "common": {
+    "cancel": "বাতিল",
+    "save": "সংরক্ষণ",
+    "delete": "মুছুন",
+    "rename": "নাম বদলান",
+    "duplicate": "কপি করুন",
+    "open": "খুলুন",
+    "close": "বন্ধ করুন",
+    "done": "সম্পন্ন",
+    "failed": "ব্যর্থ",
+    "idle": "অপেক্ষমাণ",
+    "pending": "অপেক্ষমাণ",
+    "running": "চলছে",
+    "edited": "সম্পাদিত",
+    "missing": "অনুপস্থিত",
+    "relink": "পুনরায় সংযোগ"
+  },
+  "nav": {
+    "generate": "জেনারেট",
+    "history": "ইতিহাস",
+    "settings": "সেটিংস",
+    "about": "সম্পর্কে"
+  },
+  "generate": {
+    "description": "ছবি ইমপোর্ট করে AI দিয়ে Adobe Stock মেটাডেটা তৈরি করুন",
+    "import": "ছবি ইমপোর্ট",
+    "generateAll": "সব জেনারেট",
+    "cancel": "বাতিল",
+    "exportCsv": "CSV এক্সপোর্ট",
+    "searchPlaceholder": "ফাইলের নাম, টাইটেল বা কিওয়ার্ড খুঁজুন",
+    "filterAll": "সব",
+    "filterFailed": "ব্যর্থ",
+    "filterEdited": "সম্পাদিত",
+    "filterInvalid": "অবৈধ",
+    "presetLabel": "প্রিসেট",
+    "aiGenerated": "AI দ্বারা তৈরি কনটেন্ট",
+    "shortcuts": "শর্টকাট",
+    "emptyTitle": "শুরু করতে ছবি ইমপোর্ট করুন",
+    "table": {
+      "preview": "প্রিভিউ",
+      "file": "ফাইল",
+      "title": "টাইটেল",
+      "keywords": "কিওয়ার্ড",
+      "category": "ক্যাটাগরি",
+      "status": "অবস্থা"
+    },
+    "titlePlaceholder": "জেনারেট করুন বা টাইটেল লিখুন",
+    "keywordsPlaceholder": "জেনারেট করুন বা কমা দিয়ে কিওয়ার্ড লিখুন",
+    "dropToImport": "ইমপোর্ট করতে ছবি ছেড়ে দিন"
+  },
+  "history": {
+    "description": "আগের প্রজেক্টগুলো",
+    "newProject": "নতুন প্রজেক্ট"
+  },
+  "settings": {
+    "description": "API কী, মডেল ও অ্যাপ পছন্দসমূহ",
+    "api": {
+      "title": "Gemini API কী",
+      "configured": "কনফিগার হয়েছে",
+      "notConfigured": "কনফিগার হয়নি",
+      "keyLabel": "API কী",
+      "keyPlaceholder": "আপনার API কী পেস্ট করুন",
+      "saveKey": "কী সংরক্ষণ",
+      "remove": "সরান",
+      "testConnection": "সংযোগ পরীক্ষা"
+    },
+    "generation": {
+      "title": "জেনারেশন",
+      "model": "মডেল",
+      "parallel": "সমান্তরাল রিকোয়েস্ট"
+    },
+    "appearance": {
+      "title": "চেহারা",
+      "theme": "থিম",
+      "dark": "ডার্ক",
+      "light": "লাইট",
+      "system": "সিস্টেম"
+    },
+    "language": {
+      "title": "ভাষা",
+      "label": "অ্যাপের ভাষা",
+      "en": "English",
+      "bn": "বাংলা"
+    }
+  }
+}
