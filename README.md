@@ -10,6 +10,7 @@
   <img src="https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=0B0F17" alt="React 18" />
   <img src="https://img.shields.io/badge/TypeScript-5.9%20strict-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript 5.9 strict" />
   <img src="https://img.shields.io/badge/tests-143%20passing-2EA043?style=flat-square" alt="143 tests passing" />
+  <img src="https://img.shields.io/badge/license-MIT-8A94A6?style=flat-square" alt="MIT License" />
 </p>
 
 **Tagrove turns a folder of images into Adobe Stock–ready metadata.** Import them,
@@ -264,4 +265,4 @@ legacy-wpf/    Archived C#/WPF implementation of the same product (reference onl
 
 ## License
 
-Proprietary — `UNLICENSED`, all rights reserved (see `package.json`).
+Distributed under the MIT License. See [LICENSE](./LICENSE) for the full text.
