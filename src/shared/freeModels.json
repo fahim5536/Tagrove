@@ -1,0 +1,108 @@
+{
+  "_comment": "Tagrove free-tier model allowlist. Edit this file when Google changes models or limits; no code change needed. Exact RPM/RPD numbers are not listed here: check them in Google AI Studio (Rate limits page).",
+  "lastReviewed": "2026-10-09",
+  "source": "https://ai.google.dev/gemini-api/docs/pricing (page last updated 2026-10-07 UTC)",
+  "rateLimitsSource": "https://ai.google.dev/gemini-api/docs/rate-limits (page last updated 2026-09-02 UTC)",
+  "freeTierNotes": [
+    "Free tier content may be used to improve Google products; paid tier content is not.",
+    "Rate limits apply per project, not per API key.",
+    "Daily request quotas (RPD) reset at midnight Pacific time.",
+    "Preview and experimental models have stricter limits."
+  ],
+  "models": [
+    {
+      "id": "gemini-3.5-flash-lite",
+      "displayName": "Gemini 3.5 Flash-Lite",
+      "priority": 1,
+      "status": "stable",
+      "vision": true,
+      "notes": "Cost-efficient, built for high-volume and simple data processing. Best first choice for large batches."
+    },
+    {
+      "id": "gemini-3.1-flash-lite",
+      "displayName": "Gemini 3.1 Flash-Lite",
+      "priority": 2,
+      "status": "stable",
+      "vision": true,
+      "notes": "Cost-efficient, high-volume tasks."
+    },
+    {
+      "id": "gemini-2.5-flash-lite",
+      "displayName": "Gemini 2.5 Flash-Lite",
+      "priority": 3,
+      "status": "stable",
+      "vision": true,
+      "notes": "Small, cost-effective, built for use at scale."
+    },
+    {
+      "id": "gemini-3.8-flash",
+      "displayName": "Gemini 3.8 Flash",
+      "priority": 4,
+      "status": "stable",
+      "vision": true,
+      "notes": "Newest Flash model. Likely best quality; limits may be tighter than Flash-Lite."
+    },
+    {
+      "id": "gemini-3.7-flash",
+      "displayName": "Gemini 3.7 Flash",
+      "priority": 5,
+      "status": "stable",
+      "vision": true,
+      "notes": "Fast, efficient Flash model."
+    },
+    {
+      "id": "gemini-3.6-flash",
+      "displayName": "Gemini 3.6 Flash",
+      "priority": 6,
+      "status": "stable",
+      "vision": true,
+      "notes": "Previous-generation Flash."
+    },
+    {
+      "id": "gemini-3.5-flash",
+      "displayName": "Gemini 3.5 Flash",
+      "priority": 7,
+      "status": "stable",
+      "vision": true,
+      "notes": "Earlier Flash model."
+    },
+    {
+      "id": "gemini-2.5-flash",
+      "displayName": "Gemini 2.5 Flash",
+      "priority": 8,
+      "status": "stable",
+      "vision": true,
+      "notes": "Hybrid reasoning Flash model."
+    },
+    {
+      "id": "gemini-3-flash-preview",
+      "displayName": "Gemini 3 Flash (Preview)",
+      "priority": 9,
+      "status": "preview",
+      "vision": true,
+      "notes": "Legacy preview model. May change or be removed; stricter limits likely."
+    },
+    {
+      "id": "gemini-2.5-pro",
+      "displayName": "Gemini 2.5 Pro",
+      "priority": 10,
+      "status": "stable",
+      "vision": true,
+      "notes": "Free tier is available, but Pro models usually have much tighter free limits. Keep last."
+    }
+  ],
+  "excludedIdPatterns": [
+    "*-image*",
+    "*tts*",
+    "*live*",
+    "*transcribe*",
+    "*embedding*",
+    "*omni*",
+    "*robotics*",
+    "veo*",
+    "lyria*",
+    "gemma*",
+    "gemini-3.1-pro-preview*"
+  ],
+  "excludedReason": "Not free, not vision-to-text, or not suitable for metadata generation (image generation, audio, video, music, embedding, robotics, Gemma, and paid-only Pro preview)."
+}
